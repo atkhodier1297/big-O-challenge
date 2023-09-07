@@ -42,14 +42,14 @@ function anotherFunChallenge(input) {
 
 // Drop the dominants
 function compressBoxTwice(boxes, boxesTwo) {
-  boxes.forEach(function(boxes){
-    console.log(boxes)
-  })
+  boxes.forEach(function (boxes) {
+    console.log(boxes);
+  });
   // depends on first item
 
-  boxesTwo.forEach(function(boxes){
-    console.log(boxes)
-  })
+  boxesTwo.forEach(function (boxes) {
+    console.log(boxes);
+  });
   // depends on second item
 }
 
@@ -60,17 +60,17 @@ function compressBoxTwice(boxes, boxesTwo) {
 //What to do in a nested loop situation
 
 // Log all pairs of array
-const boxes = ["a", "b", "c", "d", "e"]
+const boxes = ["a", "b", "c", "d", "e"];
 
-function logAllPairs(array){
-  for (let i = 0; i < array.length; i++){
-    for (let j = 0; j < array.length; j++){
-      console.log(array[i], array[j])
+function logAllPairs(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      console.log(array[i], array[j]);
     }
   }
 }
 
-logAllPairs(boxes)
+//logAllPairs(boxes);
 
 // What is the Big O of something like this that has nested loops
 // O(n * n) === O(n^2) Quadratic Time
@@ -79,3 +79,27 @@ logAllPairs(boxes)
 
 // Operations that are not nested is addition operations that are nested is multiplication
 // If there was multiple arguments and nested loops then it would be O(a * b)
+
+// last rule DROP NON DOMINANTS or Drop non dominant terms
+
+function printAllNumsThenAllPairSums(numbers) {
+  console.log("these are the numbers:");
+  numbers.forEach(function (number) {
+    console.log(number);
+  });
+  console.log("and these are their sums");
+  numbers.forEach(function (firstNumber) {
+    numbers.forEach(function (secondNumber) {
+      console.log(firstNumber + secondNumber);
+    });
+  });
+}
+
+printAllNumsThenAllPairSums([1,2,3,4,5])
+
+// O(n + n^2)
+// Drop the non dominant n
+// As size increases what will be most of important is n^2
+
+// Another example O(x^2+3x+100+x/2)
+// We care most about scale, even the above statement would be O(x^2)
