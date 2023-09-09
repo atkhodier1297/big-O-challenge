@@ -103,3 +103,6 @@ printAllNumsThenAllPairSums([1,2,3,4,5])
 
 // Another example O(x^2+3x+100+x/2)
 // We care most about scale, even the above statement would be O(x^2)
+// Remember if you had another nested loop it would be O(x^3)
+// 99 percent of the time that is a terrible idea
+// That would be a scale nightmare
