@@ -126,5 +126,36 @@ function arrayOfHiNTimes(n) {
   return hiArray;
 }
 
-arrayOfHiNTimes(6); // O(n)
+//arrayOfHiNTimes(6); // O(n)
 // prints an array of hi 6 times
+
+// Twitter exercise find first and last tweet
+const array = [
+  {
+    date: new Date('2023-09-01'),
+    tweet: "Just had a great weekend getaway! #relaxation"
+  },
+  {
+    date: new Date('2023-09-07'),
+    tweet: "Excited to start my new project today! #coding"
+  },
+  {
+    date: new Date('2023-09-10'),
+    tweet: "Enjoyed a delicious dinner with friends last night. #foodie"
+  }
+];
+array[0] // first tweet O(1)
+array[array.length-1] // last tweet O(1)
+
+// If your boss asked you to compare the dates and list the
+// the first and last tweet that would be O(n^2)
+// This would require nested loops
+// Perhaps you would suggest storing the data in a better way
+// to avoid the O(n^2) thinking long term maintaining scalable code
+
+// Quick tip
+'hello world'.length() // what is the Big O of .length in JS?
+// Length is the property of an object and not a function
+// Therefore it's constant time O(1) DIFF FOR OTHER LANGS
+
+
