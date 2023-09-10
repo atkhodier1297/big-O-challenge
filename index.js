@@ -95,7 +95,7 @@ function printAllNumsThenAllPairSums(numbers) {
   });
 }
 
-printAllNumsThenAllPairSums([1,2,3,4,5])
+//printAllNumsThenAllPairSums([1,2,3,4,5])
 
 // O(n + n^2)
 // Drop the non dominant n
@@ -106,3 +106,25 @@ printAllNumsThenAllPairSums([1,2,3,4,5])
 // Remember if you had another nested loop it would be O(x^3)
 // 99 percent of the time that is a terrible idea
 // That would be a scale nightmare
+
+//Space Complexity Exercise
+
+function boo(n) {
+  for (let i = 0; i < n.length; i++) {
+    console.log("boo!");
+  }
+}
+
+boo([1, 2, 3, 4, 5]); // O(1)
+// boo! runs five times
+
+function arrayOfHiNTimes(n) {
+  let hiArray = [];
+  for (let i = 0; i < n; i++) {
+    hiArray[i] = "hi";
+  }
+  return hiArray;
+}
+
+arrayOfHiNTimes(6); // O(n)
+// prints an array of hi 6 times
